@@ -1,0 +1,12 @@
+Ticket Booking Database
+        My database is about booking tickets for an event, it contains the name of person buying the tickets the person selling the ticket the time and date for the booking. It has the amount paid depending on the number of tickets one buys. It shows the venue of the event and the time and date of the event and the event name 
+         My database has five tables that is Event, Booking, Seller, Buyer and Payments.
+The Event table has a unique id, events name, the date and time the event is going to happen and the venue. With the id as the primary key.
+The Booking table has five columns namely book_id which is also the primary key in this table, no_of_tickets showing the number of tickets each person buys, book_date showing when the person books the ticket, book_time showing the time a person booked the tickets and venue showing the place of the booked function.
+The Seller table has four columns namely seller_id which is the primary key in this table. The seller_name which shows the name of the person who sold the tickets to a particular buyer, seller_mobile which shows the contact of the person who sold the tickets, rec_amount which shows the amount received by the seller for the buyer they sold tickets to. 
+The Buyer table which has four columns namely buyer_id which is the primary key, buyer_name which shows the name of the person buying the tickets, buyer_email which shows the email of the person buying the tickets and buyer_mobile showing the contact of the person who bought the ticket.
+Lastly the Payment table which is my joining table and has five columns namely P_Id which is the primary key, pay_id which is a foreign key from Buyer table as a buyer_id, amount which is the amount each buyer pays for the tickets they buy, seller_id which is a foreign key from Seller table as a seller_id, event_id which is a foreign key from Event table as an id, ticket_id which is a foreign key from Booking table as a ticket_id.
+
+
+
+
