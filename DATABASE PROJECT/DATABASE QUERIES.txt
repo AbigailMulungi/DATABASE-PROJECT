@@ -1,0 +1,6 @@
+SELECT COUNT (rec_amount) FROM Seller WHERE seller_id IN(SELECT seller_id FROM Payment WHERE ticket_id IN(SELECT book_id FROM Booking WHERE no_of_tickets LIKE "%2%"));
+SELECT event_name FROM Event WHERE id IN(SELECT event_id FROM Payment WHERE pay_id IN(SELECT seller_id FROM Seller WHERE seller_name LIKE "%Esther%"));
+SELECT seller_name,event_name,buyer_name FROM Seller JOIN Payment JOIN Buyer JOIN Event WHERE Seller.seller_id = Payment.seller_id AND Event.id = Payment.event_id AND Buyer.buyer_id = Payment.pay_id;
+SELECT venue,rec_amount,buyer_name FROM Booking JOIN Payment JOIN Buyer JOIN Seller WHERE Booking.book_id = Payment.ticket_id AND Seller.seller_id = Payment.seller_id AND Buyer.buyer_id = Payment.pay_id;
+UPDATE Event SET event_venue=" AUGUST 80'" WHERE "event_name" LIKE "%meet%";
+
